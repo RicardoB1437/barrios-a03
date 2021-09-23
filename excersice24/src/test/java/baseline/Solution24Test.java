@@ -6,11 +6,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class Solution24Test {
 
-    @Test
-    void main()
-    {
-        Boolean test = true;
 
+    @Test
+    void anagramCheck()
+    {
+        anagram name = new anagram();
+        Boolean test = false;
+        String word1 = "bails";
+        String word2 = "sail";
+        assertEquals(test, name.isAnagram(word1, word2));
     }
-    
+
 }
