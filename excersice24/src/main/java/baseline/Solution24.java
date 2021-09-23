@@ -16,15 +16,43 @@ public class Solution24
 
     private boolean anagramCheck(String str1, String str2)
     {
+        //base case
+        if(str1.length() != str2.length())
+            return false;
+
         //break string into char array
+        char[] str1ToChar = str1.toCharArray();
+        char[] str2ToChar = str2.toCharArray();
+
         //use char array to compare letters in each string
-        //return true if anagram else return false
+        //sorts char arrays into alphabetical order
+        Arrays.sort(str1ToChar);
+        Arrays.sort(str2ToChar);
+
+        //convert sorted char array back into string and use .equals to compare if equal and return
+        str1 = String.valueOf(str1ToChar);
+        str2 = String.valueOf(str2ToChar);
+        return str1.equals(str2);
     }
 
     public static void main(String[] args)
     {
+        //create object to use non static class
+        Solution24 sol = new Solution24();
+
         //prompt user for strings to check
+        System.out.println("Enter two strings and I'll tell you if they are anagrams:");
+        System.out.print("Enter the first string: ");
+        String word1 = input.nextLine();
+
+        System.out.print("Enter the second string: ");
+        String word2 = input.nextLine();
+
         //pass off to anagram check
         //if returns true print true statement else print false statement
+        if(sol.anagramCheck(word1, word2))
+            System.out.printf("\"%s\" and \"%s\" are anagrams.%n", word1, word2);
+        else
+            System.out.printf("\"%s\" and \"%s\" are not anagrams.%n", word1, word2);
     }
 }
