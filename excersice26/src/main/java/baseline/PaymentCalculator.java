@@ -14,7 +14,7 @@ public class PaymentCalculator
         double bal = inputBalance();
         double APR = inputAPR() / 100.0;
         double pay = inputMonthlyPayment();
-        double dailyRate = APR / 365;
+        double dailyRate = APR / 365.0;
         return -((1.0/30) * Math.log(1 + (Math.round(bal/pay*100)/100.0) * (1 - Math.pow((1 + dailyRate), 30))) / Math.log(1 + dailyRate));
     }
 

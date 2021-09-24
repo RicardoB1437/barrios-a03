@@ -16,7 +16,7 @@ public class Solution26
         PaymentCalculator calc = new PaymentCalculator();
 
         //call on calculateMonthsUntilPaidOff function and use to print result
-        double months = calc.calculateMonthsUntilPaidOff();
-        System.out.printf("It will take you %.0f months to pay off this card.", months);
+        int months = (int) calc.calculateMonthsUntilPaidOff();
+        System.out.printf("It will take you %d months to pay off this card.", months);
     }
 }
