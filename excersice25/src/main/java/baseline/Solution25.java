@@ -8,26 +8,21 @@ import java.util.Scanner;
 
 public class Solution25
 {
-    //
+    //all methods previously in solution class in shell code have been moved to appropriate classes
 
     private static Scanner input = new Scanner(System.in);
 
-    private int passwordValidator(String pass)
-    {
-        //break up pass into array of char
-        //go through each char and determine value
-        //if char is a num flag value is 1 if letter flag 2 if flag is 2 and length > 8 flag is 3 etc
-        //return value 0-4 depending on pass strength
-    }
-
-    private void printResult(int result)
-    {
-        //takes value of passwordValidator and prints appropriate message
-    }
-
     public static void main(String[] args)
     {
+        password pass = new password();
+
         //prompt user for a password
-        //pass off password to passValidator
+        System.out.print("Enter password: ");
+        String password = input.nextLine();
+
+        //pass off password to passValidator and print (technically single output line)
+        int result = pass.passwordValidator(password);
+        pass.printResult(result, password);
+
     }
 }
