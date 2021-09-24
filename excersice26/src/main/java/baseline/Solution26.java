@@ -4,42 +4,19 @@
  */
 
 package baseline;
-import java.util.Scanner;
 
 /*
- * all current methods/classes will be placed in their proper locations after psuedocode is done
- * they are all here simply for the moment so that i can visualize all code together
+ * all methods previously in this code were moved to their appropriate classes
  */
 
 public class Solution26
 {
-    //Round fractions of a cent up to the next cent for internal calculations
-
-    Scanner input = new Scanner(System.in);
-
-    //goes in PaymentCalculator class
-    public int calculateMonthsUntilPaidOff()
-    {
-        //n = -(1/30) * log(1 + b/p * (1 - (1 + i)^30)) / log(1 + i)
-        //n is the number of months.
-        //i is the daily rate (APR divided by 365).
-        //b is the balance.
-        //p is the monthly payment.
-        //return n
-    }
-
-    //goes in PaymentCalculator class
-    private void getInformation()
-    {
-        //What is your balance? 5000
-        //What is the APR on the card (as a percent)? 12
-        //What is the monthly payment you can make? 100
-    }
-
     public static void main(String[] args)
     {
-        //PaymentCalculator calc = new PaymentCalculator();
-        //call on getInformation function to get information
+        PaymentCalculator calc = new PaymentCalculator();
+
         //call on calculateMonthsUntilPaidOff function and use to print result
+        double months = calc.calculateMonthsUntilPaidOff();
+        System.out.printf("It will take you %.0f months to pay off this card.", months);
     }
 }
