@@ -4,11 +4,9 @@
  */
 
 package baseline;
-import java.util.Scanner;
 
 /*
- * all current methods/classes will be placed in their proper locations after psuedocode is done
- * they are all here simply for the moment so that i can visualize all code together
+ * all methods/classes previously here were placed in appropriate classes
  */
 
 public class Solution29
@@ -16,17 +14,21 @@ public class Solution29
     //Don’t allow the user to enter 0.
     //Don’t allow non-numeric values.
     //Use a loop to trap bad input, so you can ensure that the user enters valid values.
-    //Not really a need for another class
-
-    private int takeInput()
-    {
-        //use throw catch for exceptions
-    }
 
     public static void main(String[] args)
     {
-        //Solution28 sol = new Solution28();
-        //int years = 72 / takeInput();
-        //System.out.printf("It will take %d years to double your initial investment.");
+        Exception test = new Exception();
+
+        int years = 0;
+        //do while loop to test condition at end of loop instead of beginning
+        //ensures we prompt for input at least once
+        do
+        {
+            String input = test.takeNum();
+            years = test.exception(input);
+        }
+        while(years == -1);
+
+        System.out.printf("It will take %d years to double your initial investment.", years);
     }
 }
