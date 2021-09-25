@@ -4,58 +4,54 @@
  */
 
 package baseline;
+import java.util.Scanner;
 
 /*
- * all current methods/classes will be placed in their proper locations after psuedocode is done
- * they are all here simply for the moment so that i can visualize all code together
+ * all methods/classes previously here were placed in their proper locations
  */
-
-//Write a program that prompts for a first name, last name, employee ID, and ZIP code.
-// Ensure that the input is valid according to these rules:
-//
-//The first name must be filled in.
-//The last name must be filled in.
-//The first and last names must be at least two characters long.
-//An employee ID is in the format AA-1234. So, two letters, a hyphen, and four numbers.
-//The ZIP code must be a number.
-
 
 public class Solution27
 {
-    //
 
-    //all validate functions return 1 if true else return 0
-    private int validateFirstName(String fName)
+    Scanner input = new Scanner(System.in);
+
+    private String takeFName()
     {
-        //check if fist name is empty, check if > 2 chars long
+        System.out.print("Enter the first name: ");
+        return input.nextLine();
     }
 
-    private int validateLastName(String lName)
+    private String takeLName()
     {
-        //check if last name is empty, check if > 2 chars long
+        System.out.print("Enter the last name: ");
+        return input.nextLine();
     }
 
-    private int validateID(String ID)
+    private String takeZip()
     {
-        //check if format is AA-1234
+        System.out.print("Enter the ZIP code: ");
+        return input.nextLine();
     }
 
-    private int validateZip(String zip)
+    private String takeID()
     {
-        //parse in zip as a num if needed
-        //check if zip is all nums and 5 digits long
-    }
-
-    public void validateInput(String fName, String lName, String ID, String zip)
-    {
-        //call on all specific validation functions
-        //throw exceptions with try catch
-        //if no errors print "There were no errors found."
+        System.out.print("Enter the employee ID: ");
+        return input.nextLine();
     }
 
     public static void main(String[] args)
     {
-        //prompt user for input, call on user input function
-        //call on validateInput(String fName, String lName, String ID, String zip)
+        Solution27 sol = new Solution27();
+        Validator val = new Validator();
+
+        //prompt user for input, call on user input functions
+        String fName = sol.takeFName();
+        String lName = sol.takeLName();
+        String zip = sol.takeZip();
+        String ID = sol.takeID();
+
+        //call on validateInput(String fName, String lName, String zip, String ID)
+        //validate input will then print errors
+        val.validateInput(fName, lName, ID, zip);
     }
 }
