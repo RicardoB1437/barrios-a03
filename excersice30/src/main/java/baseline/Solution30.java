@@ -17,16 +17,11 @@ public class Solution30
     //Use a nested loop to complete this program.
     //Align each column within the table without using the tab character.
 
-    //create Table class and put functions inside it
-
-    private void makeRow(int baseNum)
-    {
-        //String space = "     "; (5 spaces)
-        //for loop through 12 times and multiply baseNum by i
-    }
-
     public static void main(String[] args)
     {
-        //for loop through 12 times and call makeRow(i)
+        Table table = new Table();
+
+        //calls on makeTable function, which prints each row and formats the spaces
+        table.makeTable();
     }
 }
