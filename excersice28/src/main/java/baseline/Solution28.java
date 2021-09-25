@@ -11,27 +11,24 @@ public class Solution28
 {
     //Write a program that prompts the user for five numbers and computes the total of the numbers.
     //The prompting must use repetition, such as a counted loop, not three separate prompts.
-    //This code is extremely simple and using separate classes would just be over the top
+    //Reluctantly changed so there will be an addNums class
 
     Scanner input = new Scanner(System.in);
 
-    //made public to aid in testing (which doesnt work anyway since junit doesnt prompt for input)
-    public int addNums()
-    {
-        int total = 0;
-        //loop through 5 times and ask for a number
-        for(int i=0;i<5;i++)
-        {
-            System.out.print("Enter a number: ");
-            total += input.nextInt();
-        }
-        return total;
-    }
-
     public static void main(String[] args)
     {
-        Solution28 sol = new Solution28();
-        int total = sol.addNums();
+        AddNums calc = new AddNums();
+
+        //initializing array that numbers will be stored in
+        int[] arr = new int[5];
+        for(int i=0;i<5;i++)
+        {
+            //take each number
+            arr[i] = calc.takeInput();
+        }
+
+        //pass off array of numbers to addNums funtion and print
+        int total = calc.addNums(arr);
         System.out.printf("The total is %d.", total);
     }
 }
