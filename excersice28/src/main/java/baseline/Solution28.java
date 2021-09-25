@@ -6,11 +6,6 @@
 package baseline;
 import java.util.Scanner;
 
-/*
- * all current methods/classes will be placed in their proper locations after psuedocode is done
- * they are all here simply for the moment so that i can visualize all code together
- */
-
 
 public class Solution28
 {
@@ -20,17 +15,23 @@ public class Solution28
 
     Scanner input = new Scanner(System.in);
 
-    private int addNums()
+    //made public to aid in testing (which doesnt work anyway since junit doesnt prompt for input)
+    public int addNums()
     {
+        int total = 0;
         //loop through 5 times and ask for a number
-        //int total = 0;
-        //int total += input.nextInt()
+        for(int i=0;i<5;i++)
+        {
+            System.out.print("Enter a number: ");
+            total += input.nextInt();
+        }
+        return total;
     }
 
     public static void main(String[] args)
     {
-        //Solution28 sol = new Solution28();
-        //int total = sol.addNums()
-        //System.out.printf("The total is %d.", total);
+        Solution28 sol = new Solution28();
+        int total = sol.addNums();
+        System.out.printf("The total is %d.", total);
     }
 }
