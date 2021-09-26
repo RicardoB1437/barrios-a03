@@ -20,32 +20,12 @@ public class Solution31
 
     Scanner input = new Scanner(System.in);
 
-    private String takeRestingHR()
-    {
-        //System.out.print("Resting Pulse: ");
-        //return input.nextLine();
-    }
-
-    private String takeAge()
-    {
-        //System.out.print("Age: ");
-        //return input.nextLine();
-    }
-
-    public int exceptionCheck(String input)
-    {
-        //use try catch inside while loop to continuously ask for input if string cant be parsed
-    }
-
-    public void makeTable(int restingHR, int age)
-    {
-        //TargetHeartRate = (((220 − age) − restingHR) × intensity) + restingHR
-        //generate table of targetHeartRates using formula
-    }
-
     public static void main(String[] args)
     {
-        //Table table1 = new Table();
-        //call on makeTable function
+        Table table1 = new Table();
+
+        int restingHR = table1.takeValidHR();
+        int age = table1.takeValidAge();
+        table1.makeTable(restingHR, age);
     }
 }
