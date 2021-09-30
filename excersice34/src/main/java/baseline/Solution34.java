@@ -4,7 +4,6 @@
  */
 
 package baseline;
-import java.util.Scanner;
 import java.util.*;
 
 /*
@@ -16,46 +15,20 @@ public class Solution34
 {
     //
 
-    public String takeName()
-    {
-        //System.out.print("%nEnter an employee name to remove: ");
-        //return input.nextLine();
-    }
-
-    public List<String> makeList()
-    {
-        //List<String> employees = new ArrayList<String>();
-        //add all employees to list
-        //return list
-    }
-
-    public void printList(List<String> employees)
-    {
-        //System.out.printf("There are %d employees:%n", employees.size());
-        //loop through 5 times and print names of employees in list
-    }
-
-    //return string removed for testing purposes
-    public String removeName(List<String> employees, String input)
-    {
-        //print list
-        //loop through whole list
-        //look for input in the list
-        //if found remove it
-        //print list
-    }
-
     public static void main(String[] args)
     {
-        //EmployeeList emp = new EmployeeList();
+        EmployeeList emp = new EmployeeList();
 
         //create list
-        //List<String> employees = emp.makeList();
+        List<String> employees = emp.makeList();
+
+        //print list
+        emp.printList(employees);
 
         //ask user for name to look for
-        //String searchName = emp.takeName();
+        String searchName = emp.takeName();
 
         //remove employee
-        //emp.removeName(employees, searchName);
+        emp.removeName(employees, searchName);
     }
 }
