@@ -4,55 +4,33 @@
  */
 
 package baseline;
-import java.util.Scanner;
 import java.util.*;
 import java.util.Random;
 
 /*
- * all current methods/classes will be placed in their proper locations after psuedocode is done
- * they are all here simply for the moment so that i can visualize all code together
+ * all previous methods/classes located here were placed in their appropriate classes
  */
 
 public class Solution35
 {
     //
 
-    private String takeName()
-    {
-        //System.out.print("Enter a name: ");
-        //return input.nextLine();
-    }
-
-    public List<String> makeList()
-    {
-        //List<String> names = new ArrayList<String>();
-        //while loop
-        //call takeName
-        //add to list until takeName returns empty string
-        //return list
-    }
-
-    public String pickWinner(List<String> names, int length)
-    {
-        //Random rand = new Random();
-        //int winNum = rand.nextInt(length);
-        //return names.get(winNum);
-    }
-
     public static void main(String[] args)
     {
-        ////Lottery lot = new Lottery();
+        Lottery lot = new Lottery();
+        Random rand = new Random();
 
         //create list
-        //List<String> names = lot.makeList();
+        List<String> names = lot.makeList();
 
         //get list length
-        //listLength = names.size();
+        int listLength = names.size();
 
         //get winner
-        //String winner = pickWinner(names, listLength);
+        int winNum = rand.nextInt(listLength);
+        String winner = lot.pickWinner(names, winNum);
 
         //print winner
-        //System.out.printf("The winner is... %s", winner);
+        System.out.printf("The winner is... %s", winner);
     }
 }
