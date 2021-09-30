@@ -25,8 +25,8 @@ public class Solution33
 
         String question = ball.getQuestion();
 
-        //create magic num from 1-4
-        int randNum = rand.nextInt(4) +1;
+        //create magic num from 0-3
+        int randNum = rand.nextInt(4);
         String answer = ball.magicAnswer(randNum);
 
         //print out answer
