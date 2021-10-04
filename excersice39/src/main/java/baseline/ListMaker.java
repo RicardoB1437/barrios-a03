@@ -74,8 +74,16 @@ public class ListMaker
         System.out.print("| ");
         System.out.println("Separation Date");
 
-        System.out.print("--------------------|");
-        System.out.print("-------------------|");
+        for(int i=0;i<=longestName+1;i++)
+        {
+            System.out.print("-");
+        }
+        System.out.print("|");
+        for(int i=0;i<=longestPosition+1;i++)
+        {
+            System.out.print("-");
+        }
+        System.out.print("|");
         System.out.println("----------------");
     }
 
